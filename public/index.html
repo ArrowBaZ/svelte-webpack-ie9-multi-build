@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>if (!window.Promise || ![].includes || !Object.assign || !window.Map || !window.fetch) {
+        document['wr' + 'ite']('<script src="https://polyfill.io/v3/polyfill.min.js?callback=fill&features=Array.prototype.includes%2CPromise%2CMap%2CArray.from%2CString.prototype.startsWith%2CObject.assign%2CArray.prototype.fill"><\/script>')
+    }</script>
+    <!-- On IE11, typeof HTMLElement === 'object',
+        this breaks babel 7/TS compilation of built in extension
+        Adding an adapter to add an intermediate constructor wrapping native HTMLElement to fix this issue
+    -->
+    <script>if (typeof HTMLElement === 'object') {
+        document.write('<script src="https://unpkg.com/custom-elements-es5-adapter@@1.0.0/custom-elements-es5-adapter.js" crossorigin="anonymous"><' + '/script>')
+    }</script>
+    <title><%= htmlWebpackPlugin.options.title %></title>
+</head>
+<body>
+<div class="my-custom-element">
+    Previous DATA
+</div>
+</body>
+</html>
